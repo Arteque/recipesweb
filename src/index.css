@@ -3,13 +3,13 @@
 
 @theme {
   /* Neutral */
-  --color-neutral-900: #163A34;
-  --color-neutral-600: #395852;
-  --color-neutral-300: #D0DCD9;
-  --color-neutral-200: #E0E6E3;
-  --color-neutral-100: #F6F5F1;
-  --color-neutral-0: #FFFFFF;
-
+  --color-neutral-400: #D0DCD9;
+  --color-neutral-300: #E0E6E3;
+  --color-neutral-200: #F6F5F1;
+  --color-neutral-100: #FFFFFF;
+ /* Green */
+  --color-green-100: #163A34;
+  --color-green-200: #395852;
   /* Orange */
   --color-orange-500: #FE9F6B;
 
@@ -57,7 +57,14 @@
 }
 
 @layer components {
-  
+
+  /* Containers */
+  .container{
+    @apply max-w-298 mx-auto;
+  }
+  .container--big{
+    @apply max-w-330 mx-auto;
+  }
   /* Heading Big - 72px desktop, 64px tablet, 52px mobile */
   .heading-big {
     @apply font-sans font-extrabold text-[52px] leading-[110%] tracking-[-2px] md:text-[64px] lg:text-[72px];
@@ -106,6 +113,9 @@
   /* Text Tiny - 14px Bold */
   .text-tiny {
     @apply font-sans font-bold text-[14px] leading-[150%] tracking-[-0.3px];
+  }
+  .call{
+    @apply bg-green-100 rounded-10 py-[1rem] px-[32px] text-neutral-100 font-bold duration-300 hover:bg-green-200 focus:outline-green-100 focus:outline-offset-6 ;
   }
 }
 

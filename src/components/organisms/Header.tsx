@@ -2,13 +2,13 @@ import { NavLink } from "react-router"
 
 const Header = () => {
   return (
-    <header>
+    <header className="lg:flex lg:justify-between lg:items-center container--big">
         <h1 className="sr-only">Healthy Recipes website</h1>
         <div className="logo">
             <img src="/Medias/Images/logo.svg" alt="Healthy Recipes Logo" />
         </div>
         <nav>
-            <ul>
+            <ul className="lg:flex lg:items-center lg:gap-8">
                 <li>
                     <NavLink to="/">Home</NavLink>
                 </li>
@@ -19,8 +19,8 @@ const Header = () => {
                     <NavLink to="/recipes">Recipes</NavLink>
                 </li>
             </ul>
-            <NavLink to="/browse-recipes"></NavLink>
         </nav>
+        <NavLink className="call" to="/browse-recipes">Browse recipes</NavLink>
     </header>
   )
 }
