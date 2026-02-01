@@ -7,16 +7,16 @@ const Header = () => {
         <div className="logo">
             <img src="/Medias/Images/logo.svg" alt="Healthy Recipes Logo" />
         </div>
-        <nav>
+        <nav aria-label="Primary Navigation">
             <ul className="lg:flex lg:items-center lg:gap-8">
                 <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" className={`${({isActive}: {isActive: boolean}) => isActive ? "current":""} font-semibold text-caption`}  >Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/about" className={`${({isActive}: {isActive: boolean}) => isActive ? "current":""} font-semibold text-caption`} >About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/recipes">Recipes</NavLink>
+                    <NavLink to="/recipes" className={`${({isActive}: {isActive: boolean}) => isActive ? "current":""} font-semibold text-caption`} >Recipes</NavLink>
                 </li>
             </ul>
         </nav>
