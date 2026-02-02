@@ -1,26 +1,28 @@
 import { NavLink } from "react-router"
+import BurgerMenu from "../molecules/BurgerMenu"
 
 const Header = () => {
   return (
-    <header className="lg:flex lg:justify-between lg:items-center container--big">
+    <header className="py-[1.25rem] border-b-neutral-300 border-b-4 lg:flex lg:justify-between lg:items-center container--big">
         <h1 className="sr-only">Healthy Recipes website</h1>
         <div className="logo">
             <img src="/Medias/Images/logo.svg" alt="Healthy Recipes Logo" />
         </div>
-        <nav aria-label="Primary Navigation">
+        <BurgerMenu />
+        <nav aria-label="Primary Navigation" className="pb-[0.5rem] z-900 fixed top-[4.25rem]  px-[0.5rem] left-8 right-8 bg-white rounded-16 shadow-lg">
             <ul className="lg:flex lg:items-center lg:gap-8">
                 <li>
-                    <NavLink to="/" className={`${({isActive}: {isActive: boolean}) => isActive ? "current":""} font-semibold text-caption`}  >Home</NavLink>
+                    <NavLink to="/" className={({isActive}) => `${isActive ? "current" : ""}mb-[0.5rem] block font-semibold text-caption px-[0.5rem] py-[0.75rem]`}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" className={`${({isActive}: {isActive: boolean}) => isActive ? "current":""} font-semibold text-caption`} >About</NavLink>
+                    <NavLink to="/about" className={({isActive}) => `${isActive ? "current" : ""} mb-[0.5rem] block font-semibold text-caption px-[0.5rem] py-[0.75rem]`} >About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/recipes" className={`${({isActive}: {isActive: boolean}) => isActive ? "current":""} font-semibold text-caption`} >Recipes</NavLink>
+                    <NavLink to="/recipes" className={({isActive}) => `${isActive ? "current" : ""} mb-[0.5rem] block font-semibold text-caption px-[0.5rem] py-[0.75rem]`}>Recipes</NavLink>
                 </li>
             </ul>
+            <NavLink className="call block text-center" to="/browse-recipes">Browse recipes</NavLink>
         </nav>
-        <NavLink className="call" to="/browse-recipes">Browse recipes</NavLink>
     </header>
   )
 }
