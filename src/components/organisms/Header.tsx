@@ -9,7 +9,7 @@ const Header = () => {
             <img src="/Medias/Images/logo.svg" alt="Healthy Recipes Logo" />
         </div>
         <BurgerMenu />
-        <nav aria-label="Primary Navigation" className="pb-[0.5rem] z-900 fixed top-[4.25rem]  px-[0.5rem] left-8 right-8 bg-white rounded-16 shadow-lg">
+        <nav aria-label="Primary Navigation" className="mobile-nav pb-[0.5rem] z-900 fixed top-[4.25rem]  px-[0.5rem] left-8 right-8 bg-white rounded-16 shadow-lg">
             <ul className="lg:flex lg:items-center lg:gap-8">
                 <li>
                     <NavLink to="/" className={({isActive}) => `${isActive ? "current" : ""}mb-[0.5rem] block font-semibold text-caption px-[0.5rem] py-[0.75rem]`}>Home</NavLink>
