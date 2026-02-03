@@ -65,7 +65,7 @@
   }
   
   .container--big {
-    @apply max-w-330 mx-auto;
+    @apply px-4 max-w-330 mx-auto lg:px-0;
   }
   /* Heading Big - 72px desktop, 64px tablet, 52px mobile */
   .heading-big {

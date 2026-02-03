@@ -13,6 +13,7 @@ const BurgerMenu = () => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     document.body.dataset.menuisopen = isOpen ? "true" : "false";
   },[isOpen])
+  
   return (
    <button className="absolute top-6 right-6 lg:hidden" aria-controls="primary-navigation" aria-expanded={isOpen} onClick={toggleMenu} >
          <span className="sr-only">Toggle navigation</span>
