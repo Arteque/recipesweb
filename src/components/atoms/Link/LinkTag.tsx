@@ -1,4 +1,3 @@
-import type { FC } from "react"
 import { Link } from "react-router"
 
 interface LinkTagProps  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -7,7 +6,7 @@ interface LinkTagProps  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     children: React.ReactNode | string;
 }
 
-export const LinkTag:FC<LinkTagProps> = ({ to, className='', children, ...props }) => {
+export const LinkTag = ({ to, className='', children, ...props }: LinkTagProps) => {
   return (
     <Link to={to} className={className} {...props}>{children}</Link>
   )
