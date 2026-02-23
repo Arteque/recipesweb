@@ -1,18 +1,17 @@
+import "../../../index.css"
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-    variant: 'primary' | 'secondary';
-    size: 'sm' | 'md' | 'lg';
+    variant: 'full' | 'outlined';
     children: React.ReactNode | string;
 }
 export const Button = (
     {
-        variant = 'primary',
-        size='md',
+        variant = 'full',
         children,
         ...props
     }: ButtonProps
 ) => {
     return (
-        <button className={`btn btn--${variant} btn--${size}`} {...props}>
+        <button className={`${variant}`} {...props}>
             {children}
         </button>
     )

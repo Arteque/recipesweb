@@ -117,8 +117,11 @@
     @apply font-sans font-bold text-[14px] leading-[150%] tracking-[-0.3px];
   }
   
-  .call {
+  .full {
     @apply bg-green-100 rounded-10 py-[1rem] px-[32px] text-neutral-100 font-bold duration-300 hover:bg-green-200 focus:outline-green-100 focus:outline-offset-6;
+  }
+  .outlined{
+    @apply bg-transparent border-2 rounded-10 border-neutral-400 text-green-100 font-semibold py-[10px] px-8 text-[18px];
   }
 }
 
